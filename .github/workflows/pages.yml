@@ -9,6 +9,11 @@ jobs:
   deploy:
     runs-on: ubuntu-18.04
     steps:
+      - name: checkout
+        uses: "actions/checkout@master"
+        with:
+          submodules: true
+
       - uses: actions/checkout@v2
 
       - name: Setup mdBook
